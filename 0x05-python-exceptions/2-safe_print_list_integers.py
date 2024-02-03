@@ -2,19 +2,16 @@
 
 
 def safe_print_list_integers(my_list=[], x=0):
-    idx = 0
     i = 0
-
-    while idx < x:
+    for idx in range(x):
         try:
             print("{:d}".format(my_list[idx]), end="")
-            idx += 1
             i += 1
         except IndexError:
             print()
             return i
         except Exception:
-            idx += 1
-
+            pass
+        
     print()
     return i
