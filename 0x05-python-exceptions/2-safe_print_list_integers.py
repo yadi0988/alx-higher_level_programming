@@ -13,7 +13,9 @@ def safe_print_list_integers(my_list=[], x=0):
         except IndexError:
             print()
             return i
-        except Exception:
+        except TypeError:
+            idx += 1
+        except ValueError:
             idx += 1
     print()
     return i
