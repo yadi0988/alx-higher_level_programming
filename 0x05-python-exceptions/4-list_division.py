@@ -18,4 +18,6 @@ def list_division(my_list_1, my_list_2, list_length):
             _list.append(0)
         else:
             _list.append(result)
+        finally:
+            pass
     return _list
