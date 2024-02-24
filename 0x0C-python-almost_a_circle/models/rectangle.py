@@ -63,3 +63,7 @@ class Rectangle(Base):
     def y(self, y):
         self.validation("y", y)
         self.__y = y
+
+    def area(self):
+        "function that calculate area"
+        return self.width * self.height
