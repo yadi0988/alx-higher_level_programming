@@ -17,6 +17,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def validation(self, name, value):
+        "............."
         if type(value) is not int:
             raise TypeError(name + " must be an integer")
         if name == "x" or name == "y":
