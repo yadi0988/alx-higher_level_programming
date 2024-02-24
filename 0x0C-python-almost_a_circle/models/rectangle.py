@@ -17,7 +17,7 @@ class Rectangle(Base):
         super().__init__(id)
 
     def validation(self, name, value):
-        "............."
+        "Function to validate the attributes"
         if type(value) is not int:
             raise TypeError(name + " must be an integer")
         if name == "x" or name == "y":
@@ -28,7 +28,6 @@ class Rectangle(Base):
             if value <= 0:
                 raise ValueError(name + " must be > 0")
 
-    
     @property
     def width(self):
         return self.__width
