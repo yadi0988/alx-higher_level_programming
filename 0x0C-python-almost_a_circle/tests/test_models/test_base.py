@@ -4,7 +4,7 @@ import unittest
 
 class test_id(unittest.TestCase):
 
-    def test_id(self):
+    def test_Base(self):
         obj = Base()
         obj2 = Base()
         obj3 = Base()
