@@ -114,6 +114,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         "function that returns the dictionary representation of Rectangle"
-        return {'x': getattr(self, 'x'), "y": getattr(self, 'y'), \
-                "id": getattr(self, "id"), "height": \
-                getattr(self, 'height'), "width": getattr(self, 'width')}
+        return {
+            'x': getattr(self, 'x'),
+            "y": getattr(self, 'y'),
+            "id": getattr(self, "id"),
+            "height": getattr(self, 'height'),
+            "width": getattr(self, 'width')
+        }
