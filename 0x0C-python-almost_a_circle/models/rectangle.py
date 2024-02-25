@@ -85,6 +85,7 @@ class Rectangle(Base):
 """.format(self.id, self.x, self.y, self.width, self.height)
 
     def update(self, *args):
+        "function that assigns an argument to each attribute"
         num = 0
         for arg in args:
             num += 1
