@@ -32,3 +32,10 @@ class Base:
                     list_objs[n] = obj.to_dictionary()
                     n += 1
                 fp.write(Base.to_json_string(list_objs))
+
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or json_string == "":
+            return []
+        else:
+            return json.loads(json_string)
