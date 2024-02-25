@@ -48,3 +48,9 @@ class Square(Rectangle):
                 self.x = value
             if key == "y" and num < 4:
                 self.y = value
+
+    def to_dictionary(self):
+        "function that returns the dictionary representation of a Square"
+        return {"id": getattr(self, 'id'), "size": \
+                getattr(self, 'size'), "x": \
+                getattr(self, 'x'), "y": getattr(self, 'y')}
