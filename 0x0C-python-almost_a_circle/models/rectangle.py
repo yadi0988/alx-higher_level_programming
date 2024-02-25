@@ -84,7 +84,7 @@ class Rectangle(Base):
 [Rectangle] ({}) {}/{} - {}/{}\
 """.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         "function that assigns an argument to each attribute"
         num = 0
         for arg in args:
@@ -99,3 +99,15 @@ class Rectangle(Base):
                 self.x = arg
             if num == 5:
                 self.y = arg
+
+        for key, value in kwargs.items():
+            if key == "id":
+                self.id = value
+            if key == "width":
+                self.width = value
+            if key == "height":
+                self.height = value
+            if key == "x":
+                self.x = value
+            if key == "y":
+                self.y = value
