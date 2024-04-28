@@ -26,7 +26,7 @@ if (__name__ == "__main__"):
         ON cities.state_id = states.id
     """)
 
-    result = mycursor.fetchmany(15)
+    result = mycursor.fetchall()
 
     for row in result:
         print(row)
