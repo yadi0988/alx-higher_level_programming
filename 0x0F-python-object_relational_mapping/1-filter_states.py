@@ -19,7 +19,8 @@ if (__name__ == "__main__"):
     )
 
     mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id")
+    query = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY id"
+    mycursor.execute(query)
     result = mycursor.fetchall()
 
     for row in result:
