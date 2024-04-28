@@ -8,9 +8,6 @@ from sqlalchemy.orm import sessionmaker
 from model_city import City
 
 if __name__ == "__main__":
-    """
-    script that lists all State objects from the database hbtn_0e_6_usa
-    """
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
         sys.argv[2],
