@@ -22,7 +22,7 @@ if (__name__ == "__main__"):
     )
 
     mycursor = mydb.cursor()
-    query = "SELECT * FROM states WHERE name = '{}'".format(sys.argv[4])
+    query = "SELECT * FROM states WHERE BINARY name = '{}'".format(sys.argv[4])
     mycursor.execute(query)
     result = mycursor.fetchall()
 
