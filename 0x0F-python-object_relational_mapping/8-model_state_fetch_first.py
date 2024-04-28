@@ -20,7 +20,10 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    for state in session.query(State).order_by(State.id).all():
-        print(f"{state.id}: {state.name}")
+    Query = session.query(State).order_by(State.id).first()
+    if Query:
+        print(f"{Query.id}: {Query.name}")
+    else:
+        print("Nothing")
 
     session.close()
