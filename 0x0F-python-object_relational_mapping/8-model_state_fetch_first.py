@@ -21,9 +21,9 @@ if __name__ == "__main__":
     session = Session()
 
     Query = session.query(State).order_by(State.id).first()
-    if Query:
-        print(f"{Query.id}: {Query.name}")
-    else:
+    if Query is None:
         print("Nothing")
+    else:
+        print('{0}: {1}'.format(Query.id, Query.name))
 
     session.close()
